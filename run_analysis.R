@@ -69,6 +69,7 @@ dmean <- with(dlbl, aggregate(
   list(subject=subject, activity=activity), mean))
 
 
-write.table(dmean, file="tidy_data.txt", row.names=FALSE)
+write.table(format(dmean, scientific=TRUE), file="tidy_data.txt"
+            , row.names=FALSE, quote=FALSE)
 
 
